@@ -45,6 +45,8 @@ Example: `https://cw-quotes.herokuapp.com/api/quotes?p=16`
 
 **NOTE:** without `p` query param endpoint will response with the first 100 quotes (first page)
 
+---
+
 ### GET `/api/quotes/random`
 
 **Response:**
@@ -54,6 +56,8 @@ Example: `https://cw-quotes.herokuapp.com/api/quotes?p=16`
   result: Quote,    // Random quote
 }
 ```
+
+---
 
 ### GET `/api/quotes/all`
 
