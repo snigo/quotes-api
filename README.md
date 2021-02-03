@@ -39,7 +39,7 @@ Example: `https://cw-quotes.herokuapp.com/api/quotes?p=16`
 {
   status: 200,      // Response status
   result: Quote[],  // Array of 100 quotes, or empty array if page exceeds the page count
-  next: string;     // url 
+  next: string;     // url to fetch the next page or null if next page doesn't exist
 }
 ```
 
