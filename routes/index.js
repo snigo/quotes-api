@@ -22,15 +22,6 @@ apiRouter.get('/quotes', (req, res) => {
     next: result.length === quotesPerPage ? `${own}/api/quotes?p=${page + 1}` : null,
   });
 });
-apiRouter.get('/quotes/:id', (req, res) => {
-  const { id } = req.params;
-  const result = getById(id);
-  if (!result) return notFound(res, `message with id ${id} does not exist`);
-  return res.status(200).json({
-    status: 200,
-    result,
-  });
-});
 apiRouter.get('/quotes/all', (_, res) => {
   const result = getAll();
   return res.status(200).json({
@@ -40,6 +31,15 @@ apiRouter.get('/quotes/all', (_, res) => {
 });
 apiRouter.get('/quotes/random', (_, res) => {
   const result = getRandom();
+  return res.status(200).json({
+    status: 200,
+    result,
+  });
+});
+apiRouter.get('/quotes/:id', (req, res) => {
+  const { id } = req.params;
+  const result = getById(id);
+  if (!result) return notFound(res, `message with id ${id} does not exist`);
   return res.status(200).json({
     status: 200,
     result,
