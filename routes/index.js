@@ -7,7 +7,8 @@ const {
   quotesPerPage,
 } = require('../model');
 
-const own = process.env.OWN_URL?.replace(/\/$/, '');
+const own = (process.env.OWN_URL || '').replace(/\/$/, '');
+console.log('OWN PATH: ', own);
 
 const apiRouter = Router();
 apiRouter.get('/quotes', (req, res) => {
