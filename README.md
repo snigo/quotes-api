@@ -21,7 +21,7 @@ RESPONSE {
 {
   id: string;       // id of the quote
   text: string;     // Textual content of the quote
-  authour: string;  // Name of the author or "Unknown"
+  author: string;  // Name of the author or "Unknown"
 }
 ```
 
