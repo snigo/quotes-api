@@ -21,7 +21,7 @@ RESPONSE {
 {
   id: string;       // id of the quote
   text: string;     // Textual content of the quote
-  author: string;  // Name of the author or "Unknown"
+  author: string;   // Name of the author or "Unknown"
 }
 ```
 
@@ -42,6 +42,8 @@ Example: `https://cw-quotes.herokuapp.com/api/quotes?p=16`
   next: string;     // url 
 }
 ```
+
+**NOTE:** without `p` query param endpoint will response with the first 100 quotes (first page)
 
 ### GET `/api/quotes/random`
 
