@@ -12,6 +12,8 @@ app.use(helmet());
 app.use(cors());
 app.use('/api', apiRouter);
 
+logger.info('PORT: ', PORT);
+
 app.listen(PORT, () => {
   logger.info(`Server is up and running on port ${PORT}`);
 });
